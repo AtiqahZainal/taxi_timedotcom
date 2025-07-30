@@ -60,7 +60,11 @@ There are 3 questions to this assignments:
    <img width="998" height="403" alt="image" src="https://github.com/user-attachments/assets/8d911adc-30cd-4909-a71c-162b633a98e2" />
    Based on the result, there are no significant impact from public holiday to the increase/decrease of trips. However, impact is more apparent coming from the total amount for the trips ($) based on the average
    values. This could mainly contributed to the additional charges from airport as people are heading for holidays. Also, it could be some other charges applicable during public holiday.
-   
+
+Bonus Questions:
+1) Hour of the day
+2) Payment trend
+
 As for visualization, we use the two datamarts to create reports. However, most of the created visualisation in the report is meant to be for answering the questions given.
 
 Future enhancements include:
