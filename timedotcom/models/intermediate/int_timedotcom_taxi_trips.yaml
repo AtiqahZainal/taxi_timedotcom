@@ -1,0 +1,90 @@
+models:
+  - name: int_timedotcom__taxi_trips
+    description: "Joining the table with holiday data, filter for most usable data for analysis"
+    columns:
+      - name: unique_key
+        description: "Unique ID for each trip"
+
+      - name: taxi_id
+        description: ""
+
+      - name: trip_date
+        description: ""
+
+      - name: trip_start_datetime
+        description: ""
+        tests:
+            - not_null
+
+      - name: trip_end_datetime
+        description: ""
+        tests:
+          - not_null
+
+      - name: trip_seconds
+        description: ""
+        tests:
+          - not_null
+
+      - name: trip_minutes
+        description: ""
+
+      - name: trip_miles
+        description: ""
+        tests:
+          - not_null
+
+      - name: fare
+        description: ""
+
+      - name: tips
+        description: ""
+
+      - name: tolls
+        description: ""
+
+      - name: extras
+        description: ""
+
+      - name: trip_total
+        description: ""
+        tests:
+          - not_null
+
+      - name: trip_total_amount
+        description: ""
+        tests:
+          - not_null
+
+      - name: payment_type
+        description: ""
+
+      - name: company
+        description: ""
+
+      - name: pickup_latitude
+        description: ""
+
+      - name: pickup_longitude
+        description: ""
+
+      - name: pickup_location
+        description: ""
+
+      - name: dropoff_latitude
+        description: ""
+
+      - name: dropoff_longitude
+        description: ""
+
+      - name: dropoff_location
+        description: ""
+
+      - name: holiday_name
+        description: ""
+
+      - name: is_holiday
+        description: ""
+
+      - name: trip_idle
+        description: ""

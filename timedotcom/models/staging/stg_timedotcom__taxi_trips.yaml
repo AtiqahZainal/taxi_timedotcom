@@ -10,6 +10,8 @@ models:
 
       - name: taxi_id
         description: "Taxi ID associated with Company"
+        tests:
+          - not_null
 
       - name: trip_start_timestamp
         description: ""
@@ -20,12 +22,19 @@ models:
           - dbt_utils.expression_is_true:
               expression: "trip_end_timestamp > trip_start_timestamp"
               name: end_trip_after_start_timestamp
+          - dbt_utils.expression_is_true:
+              expression: "datetime_diff(trip_end_datetime,trip_start_datetime,hour) <= 2"
+              name: city_trip_maximum_will_take_2_hours
 
       - name: trip_seconds
         description: ""
 
       - name: trip_miles
         description: ""
+        tests:
+          - dbt_utils.expression_is_true:
+              expression: "trip_miles <= 40"
+              name: city_trip_less_thank_40_miles
 
       - name: fare
         description: ""
@@ -41,6 +50,17 @@ models:
 
       - name: trip_total
         description: ""
+        tests:
+          - dbt_utils.expression_is_true:
+              expression: "trip_total > 0"
+              name: all_trip_total_must_greater_than_0
+
+      - name: trip_total_amount
+        description: ""
+        tests:
+          - dbt_utils.expression_is_true:
+              expression: "fare+tips+tolls+extras > 0"
+              name: trip_amount_must_greater_than_0
 
       - name: payment_type
         description: ""

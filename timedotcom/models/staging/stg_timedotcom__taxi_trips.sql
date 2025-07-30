@@ -28,6 +28,7 @@ select
 	tolls,
 	extras,
 	trip_total,
+	fare+tips+tolls+extras as trip_total_amount,
 	payment_type,
 	company,
 	pickup_latitude,
