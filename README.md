@@ -10,8 +10,8 @@ Repo https://github.com/AtiqahZainal/taxi_timedotcom
 GCP https://console.cloud.google.com/bigquery?authuser=1&inv=1&invt=Ab4Khg&project=location-1571108398066&ws=!1m4!1m3!3m2!1slocation-1571108398066!2sdbt_taxi_chicago
 Looker Studio https://lookerstudio.google.com/u/1/reporting/d5944765-18c4-4abe-a74e-75b2cae30dfa/page/p_f6kjhtkuud
 
-The raw data are split into 3 types using dbt :
-**1) Staging Data**
+The raw data are split into 3 models using dbt :
+1) Staging Model
    - The data is partitioned based on the start trip date
    - A new column called trip_total_amount is being created because the trip_total may not be equal with the sum of the fare, tips, tolls and extras. Hence we'll        be using this column for the correct amount
    - The data used for this table is from the year of 2020
@@ -20,13 +20,13 @@ The raw data are split into 3 types using dbt :
      ii) maximum city trips in Chicago should only take up to 2 hours
      iii) maximum city trips in Chicago should only go up to 40 miles
      iv) only consider those with more than 0 trip total
-**2) Intermediate Data**
+2) Intermediate Model
    - For the purpose of understanding the impact of public holiday, a seed table for US Holiday is created (assuming all public holidays are the same for each city)
    - The table from (1) will be joining with US Holiday table
    - Timestamp column is converted into datetime, nonetheless no changes to the timezone as it is stated the timestamp for this data is captured in local time
    - Most of the tests mentioned in (1) is filtered here with additional rule :
      not (trip_start_datetime = trip_end_datetime and trip_seconds is null and trip_seconds = 0 and trip_miles = 0 and trip_miles is null) to remove invalid trips
-**3) Marts**
+3) Mart Model
      There are 2 marts created from the reusable data in (2)
      i) Drivers - this data is mainly an aggregation of trips and amount at driver level (or taxi id). The use cases for this include top earners, most
         hardworking, top companies, total trips, total amount etc.
