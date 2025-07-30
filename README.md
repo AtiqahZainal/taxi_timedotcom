@@ -68,7 +68,7 @@ Bonus Questions:
 1) Trips, amount and also tips are showing the same trend based on the hours of the day. The peak hour for taxi is at 5pm where from 2pm till 8pm is where most of the taxi is being booked. Additionally, taxi ride    in the morning is far less than evening, probably due to the after office activities that such as dinner and team engagement encourages more bookings in the evening.
    <img width="1022" height="551" alt="image" src="https://github.com/user-attachments/assets/7e5c9fbd-2e54-4e63-ac8e-361c8c88cea2" />
 
-2) Credit card has always been the most favourite payment method for taxi trips, however, the gaps with the second top payment method i.e. cash has continue to widen from 2020 until 2023. The mobile payment          method has continue to grow filling up the gap with the assuming it has taken the cash market share. This is actually make sense as technology grows rapidly in the last few years where mobile payment continue     to emerged.
+2) Credit card has always been the most favourite payment method for taxi trips, however, the gaps with the second top payment method i.e. cash has continue to widen from 2020 until 2023. The mobile payment          method has continue to grow filling up the gap with the assuming it has taken the cash market share. This is actually make sense as technology grows rapidly in the last few years where mobile payment continues    to developed by many players out there.
    <img width="582" height="442" alt="image" src="https://github.com/user-attachments/assets/a31d8e31-74aa-45dd-b438-8415de5068c8" />
 
 As for visualization, we use the two datamarts to create reports. However, most of the created visualisation in the report is meant to be for answering the questions given.
