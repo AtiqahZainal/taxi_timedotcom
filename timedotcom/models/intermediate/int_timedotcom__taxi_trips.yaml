@@ -1,6 +1,7 @@
 models:
   - name: int_timedotcom__taxi_trips
     description: "Joining the table with holiday data, filter for most usable data for analysis"
+
     columns:
       - name: unique_key
         description: "Unique ID for each trip"

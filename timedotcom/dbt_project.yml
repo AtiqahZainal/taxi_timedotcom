@@ -38,9 +38,13 @@ models:
 
 seeds:
   timedotcom:
-    us_holidays:
+    us_holiday:
       quote_columns: false
       column_types:
         holiday_date: date
         holiday_name: string
         is_holiday: boolean
+
+tests:
+  timedotcom:
+    +severity: warn

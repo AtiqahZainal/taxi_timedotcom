@@ -54,6 +54,9 @@ models:
           - dbt_utils.expression_is_true:
               expression: "trip_total > 0"
               name: all_trip_total_must_greater_than_0
+          - dbt_utils.expression_is_true:
+              expression: "trip_total <> fare+tips+tolls+extras"
+              name: trip_total_not_equal_manual_calculated
 
       - name: trip_total_amount
         description: ""
