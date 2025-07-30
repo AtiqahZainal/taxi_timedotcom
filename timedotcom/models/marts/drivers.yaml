@@ -23,6 +23,9 @@ models:
       - name: num_of_trip
         description: ""
 
+      - name: trip_total_amount
+        description: ""
+
       - name: fare
         description: ""
 

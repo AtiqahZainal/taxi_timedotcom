@@ -35,6 +35,7 @@ select distinct
 	datetime_diff(max(trip_end_datetime),
 	min(trip_start_datetime), minute) as shift_duration_mins,
 	count(*) as num_of_trip,
+	sum(trip_total_amount) as trip_total_amount,
 	sum(fare) as fare,
 	sum(tips) as tip,
 	sum(tolls) as tolls,
