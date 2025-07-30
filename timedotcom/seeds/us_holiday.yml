@@ -1,0 +1,14 @@
+version: 2
+
+seeds:
+  - name: us_holidays
+    description: "List of official U.S. federal holidays from 2020 to 2023"
+    columns:
+      - name: holiday_date
+        description: "Date of the holiday"
+        tests:
+          - not_null
+      - name: holiday_name
+        description: "Name of the holiday"
+      - name: is_holiday
+        description: "Boolean flag to identify if it's a holiday"

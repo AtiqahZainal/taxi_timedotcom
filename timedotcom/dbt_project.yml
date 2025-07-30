@@ -32,3 +32,15 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   timedotcom:
     +materialized: table
+    +persist_docs:
+      relation: true
+      columns: true
+
+seeds:
+  timedotcom:
+    us_holidays:
+      quote_columns: false
+      column_types:
+        holiday_date: date
+        holiday_name: string
+        is_holiday: boolean

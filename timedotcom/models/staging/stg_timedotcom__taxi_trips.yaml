@@ -1,38 +1,30 @@
 models:
   - name: stg_timedotcom__taxi_trips
-    description: 'Table of 1 row p'
+    description: 'Raw data from sources, partitioned the table by date and only taking data from 2020'
     columns:
       - name: unique_key
-        description: ""
+        description: "Unique ID for each trip"
         tests:
           - not_null
           - unique
 
       - name: taxi_id
-        description: ""
+        description: "Taxi ID associated with Company"
 
       - name: trip_start_timestamp
         description: ""
 
       - name: trip_end_timestamp
         description: ""
+        tests:
+          - dbt_utils.expression_is_true:
+              expression: "trip_end_timestamp > trip_start_timestamp"
+              name: end_trip_after_start_timestamp
 
       - name: trip_seconds
         description: ""
 
       - name: trip_miles
-        description: ""
-
-      - name: pickup_census_tract
-        description: ""
-
-      - name: dropoff_census_tract
-        description: ""
-
-      - name: pickup_community_area
-        description: ""
-
-      - name: dropoff_community_area
         description: ""
 
       - name: fare
@@ -52,9 +44,24 @@ models:
 
       - name: payment_type
         description: ""
+        tests:
+          - not_null
+          - accepted_values:
+              name: unexpected_payment_type
+              values:
+                - "No Charge"
+                - "Prcard"
+                - "Dispute"
+                - "Prepaid"
+                - "Cash"
+                - "Unknown"
+                - "Mobile"
+                - "Credit Card"
 
       - name: company
         description: ""
+        tests:
+          - not_null
 
       - name: pickup_latitude
         description: ""

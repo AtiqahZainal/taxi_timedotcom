@@ -1,20 +1,28 @@
-WITH source AS (
-	SELECT *
+{{ config(
+    materialized='incremental',
+    unique_key='unique_key',
+	partition_by={"field": "trip_date", "data_type": "date"}
+) }}
 
-	FROM {{ source('chicago_taxi_trips', 'taxi_trips') }}
+with source as (
+  select
+    *,
+    cast(trip_start_timestamp as date) as trip_date
+  from {{ source('chicago_taxi_trips', 'taxi_trips') }}
+  {% if is_incremental() %}
+    where trip_start_timestamp >= (select max(trip_start_timestamp) from {{ this }})
+  {% endif %}
 )
 
-SELECT
+
+select
 	unique_key,
 	taxi_id,
+	cast(trip_start_timestamp as date) as trip_date,
 	trip_start_timestamp,
 	trip_end_timestamp,
 	trip_seconds,
 	trip_miles,
-	pickup_census_tract,
-	dropoff_census_tract,
-	pickup_community_area,
-	dropoff_community_area,
 	fare,
 	tips,
 	tolls,
@@ -28,5 +36,5 @@ SELECT
 	dropoff_latitude,
 	dropoff_longitude,
 	dropoff_location
-
-FROM source
+from source
+where trip_start_timestamp >= '2020-01-01'
