@@ -39,6 +39,7 @@ There are 3 questions to this assignments:
    - Taxi IDs are representing the drivers
    - There are instances when 1 Taxi IDs has multiple company, hence we'll treat them as different unique ID
    - For answer may refer to table "Top 100 Tip Earners" from https://lookerstudio.google.com/u/1/reporting/d5944765-18c4-4abe-a74e-75b2cae30dfa/page/p_f6kjhtkuud
+     <img width="1127" height="348" alt="image" src="https://github.com/user-attachments/assets/9a9000e9-1950-4c0e-9fe8-ac8e3bb6ce27" />
      
 2) Who are the top 100 “overworkers”, taxi IDs that work more hours than others without taking at least 8 hours break and regularly have a long shift.
    - A new shifts meaning it starts if there is a gap of more than 8 hours from previous trips
@@ -46,6 +47,8 @@ There are 3 questions to this assignments:
    - There are instances when 1 Taxi IDs has multiple company, hence we'll treat them as different unique ID
    - Top 100 is based on the number of trips made for the last 3 months
    - For answer may refer to table Top 100 Overworked Drivers https://lookerstudio.google.com/u/1/reporting/d5944765-18c4-4abe-a74e-75b2cae30dfa/page/p_f6kjhtkuud
+     <img width="1133" height="360" alt="image" src="https://github.com/user-attachments/assets/c8aaf106-e88f-4cfc-85c4-9c3920641bd8" />
+
    
 3) Do you think the public holidays in US had an impact on the increase/decrease the trips.
    The query:
@@ -62,8 +65,11 @@ There are 3 questions to this assignments:
    values. This could mainly contributed to the additional charges from airport as people are heading for holidays. Also, it could be some other charges applicable during public holiday.
 
 Bonus Questions:
-1) Hour of the day
-2) Payment trend
+1) Trips, amount and also tips are showing the same trend based on the hours of the day. The peak hour for taxi is at 5pm where from 2pm till 8pm is where most of the taxi is being booked. Additionally, taxi ride    in the morning is far less than evening, probably due to the after office activities that such as dinner and team engagement encourages more bookings in the evening.
+   <img width="1022" height="551" alt="image" src="https://github.com/user-attachments/assets/7e5c9fbd-2e54-4e63-ac8e-361c8c88cea2" />
+
+2) Credit card has always been the most favourite payment method for taxi trips, however, the gaps with the second top payment method i.e. cash has continue to widen from 2020 until 2023. The mobile payment          method has continue to grow filling up the gap with the assuming it has taken the cash market share. This is actually make sense as technology grows rapidly in the last few years where mobile payment continue     to emerged.
+   <img width="582" height="442" alt="image" src="https://github.com/user-attachments/assets/a31d8e31-74aa-45dd-b438-8415de5068c8" />
 
 As for visualization, we use the two datamarts to create reports. However, most of the created visualisation in the report is meant to be for answering the questions given.
 
@@ -74,3 +80,4 @@ Future enhancements include:
 - Improve the visualization with more insights
 - Highlight the invalid data from tests to futher improve the system
 - To also validate the data from the dashboard especially on the overworked drivers
+- To include as much as description in the table
