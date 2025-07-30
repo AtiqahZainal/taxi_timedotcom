@@ -1,0 +1,39 @@
+models:
+  - name: dim_drivers
+    description: ""
+    columns:
+      - name: taxi_id
+        description: ""
+
+      - name: company
+        description: ""
+
+      - name: shift_num
+        description: ""
+
+      - name: start_shift
+        description: ""
+
+      - name: end_shift
+        description: ""
+
+      - name: shift_duration_mins
+        description: ""
+
+      - name: num_of_trip
+        description: ""
+
+      - name: fare
+        description: ""
+
+      - name: tip
+        description: ""
+
+      - name: tolls
+        description: ""
+
+      - name: extras
+        description: ""
+
+      - name: long_shifts
+        description: ""

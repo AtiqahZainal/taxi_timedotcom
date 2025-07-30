@@ -1,0 +1,36 @@
+models:
+  - name: dim_trips
+    description: ""
+    columns:
+      - name: trip_date
+        description: ""
+
+      - name: year
+        description: ""
+
+      - name: hour_trip
+        description: ""
+
+      - name: payment_type
+        description: ""
+
+      - name: is_holiday
+        description: ""
+
+      - name: trip_freq
+        description: ""
+
+      - name: trip_total_amount
+        description: ""
+
+      - name: fare
+        description: ""
+
+      - name: tips
+        description: ""
+
+      - name: tolls
+        description: ""
+
+      - name: extras
+        description: ""
