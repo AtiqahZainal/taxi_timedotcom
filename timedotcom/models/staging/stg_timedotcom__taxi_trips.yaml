@@ -1,0 +1,75 @@
+models:
+  - name: stg_timedotcom__taxi_trips
+    description: 'Table of 1 row p'
+    columns:
+      - name: unique_key
+        description: ""
+        tests:
+          - not_null
+          - unique
+
+      - name: taxi_id
+        description: ""
+
+      - name: trip_start_timestamp
+        description: ""
+
+      - name: trip_end_timestamp
+        description: ""
+
+      - name: trip_seconds
+        description: ""
+
+      - name: trip_miles
+        description: ""
+
+      - name: pickup_census_tract
+        description: ""
+
+      - name: dropoff_census_tract
+        description: ""
+
+      - name: pickup_community_area
+        description: ""
+
+      - name: dropoff_community_area
+        description: ""
+
+      - name: fare
+        description: ""
+
+      - name: tips
+        description: ""
+
+      - name: tolls
+        description: ""
+
+      - name: extras
+        description: ""
+
+      - name: trip_total
+        description: ""
+
+      - name: payment_type
+        description: ""
+
+      - name: company
+        description: ""
+
+      - name: pickup_latitude
+        description: ""
+
+      - name: pickup_longitude
+        description: ""
+
+      - name: pickup_location
+        description: ""
+
+      - name: dropoff_latitude
+        description: ""
+
+      - name: dropoff_longitude
+        description: ""
+
+      - name: dropoff_location
+        description: ""
